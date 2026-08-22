@@ -116,4 +116,11 @@ main { max-width: var(--max); margin: 0 auto; padding: 3rem 1.25rem 5rem; }
 .confirm h1 { font-family: var(--serif); font-size: 2rem; margin: .5rem 0; }
 
 /* Footer */
+.site-footer { border-top: 1px solid var(--line); padding: 2rem 1.25rem; text-align: center; color: var(--ink-soft); font-size: .8rem; }.reflection-form .btn { align-self: flex-start; }
+
+/* Confirmation */
+.confirm { text-align: center; padding: 3rem 0; }
+.confirm h1 { font-family: var(--serif); font-size: 2rem; margin: .5rem 0; }
+
+/* Footer */
 .site-footer { border-top: 1px solid var(--line); padding: 2rem 1.25rem; text-align: center; color: var(--ink-soft); font-size: .8rem; }

@@ -1,0 +1,41 @@
+@page "/Reflection"
+@model EchoesOfGrace.Pages.ReflectionModel
+
+@if (Model.Submitted)
+{
+    <section class="confirm">
+        <p class="eyebrow">Received</p>
+        <h1>Thank you, @Model.SubmittedName.</h1>
+        <p>Your reflection has been recorded.</p>
+        <div class="hero-actions">
+            <a class="btn btn-primary" href="/Confessions">Back to Confessions</a>
+            <a class="btn btn-secondary" href="/Reflection">Write another</a>
+        </div>
+    </section>
+}
+else
+{
+    <section class="page-head">
+        <p class="eyebrow">Respond</p>
+        <h1>Leave a Reflection</h1>
+        <p class="page-sub">Submitted through a real ASP.NET Core form &mdash; validated and processed in C#.</p>
+    </section>
+
+    <form method="post" class="reflection-form" novalidate>
+        <div class="field">
+            <label asp-for="Input.Name">Name</label>
+            <input asp-for="Input.Name" placeholder="Your name" />
+            <span asp-validation-for="Input.Name" class="error"></span>
+        </div>
+        <div class="field">
+            <label asp-for="Input.Reflection">Reflection</label>
+            <textarea asp-for="Input.Reflection" rows="5" placeholder="What stood out to you?"></textarea>
+            <span asp-validation-for="Input.Reflection" class="error"></span>
+        </div>
+        <div class="field">
+            <label asp-for="Input.Lesson">Lesson learned from St. Augustine (optional)</label>
+            <textarea asp-for="Input.Lesson" rows="3" placeholder="A line, a question, a lesson..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+}

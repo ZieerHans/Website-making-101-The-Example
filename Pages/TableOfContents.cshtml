@@ -1,0 +1,32 @@
+@page "/TableOfContents"
+@model EchoesOfGrace.Pages.TableOfContentsModel
+
+<section class="page-head">
+    <p class="eyebrow">Contents</p>
+    <h1>Table of Contents</h1>
+</section>
+
+<ol class="toc-full">
+    <li><a href="/">Introduction</a></li>
+    <li><a href="/#dedication">Dedication</a></li>
+    @foreach (var entry in EchoesOfGrace.Data.SiteContent.Entries.Where(e => e.Id != "introduction" && e.Id != "vow"))
+    {
+        <li><a href="/Confessions#@entry.Id">@entry.Name</a></li>
+    }
+    <li><a href="/FinalPrayer">Final Prayer / Vow</a></li>
+</ol>
+----- END FILE: Pages/TableOfContents.cshtml -----
+
+----- FILE: Pages/TableOfContents.cshtml.cs -----
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
+namespace EchoesOfGrace.Pages;
+
+public class TableOfContentsModel : PageModel
+{
+    public void OnGet()
+    {
+        ViewData["Title"] = "Table of Contents";
+        ViewData["Active"] = "TableOfContents";
+    }
+}

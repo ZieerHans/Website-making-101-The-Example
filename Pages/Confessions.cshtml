@@ -1,0 +1,37 @@
+@page "/Confessions"
+@model EchoesOfGrace.Pages.ConfessionsModel
+
+<section class="page-head">
+    <p class="eyebrow">Read</p>
+    <h1>Confessions</h1>
+    <p class="page-sub">Ten personal reflections, and a shared word.</p>
+</section>
+
+@{
+    var entries = EchoesOfGrace.Data.SiteContent.Entries.Where(e => e.Id != "introduction" && e.Id != "vow");
+}
+
+<nav class="jump-nav" aria-label="Jump to a confession">
+    @foreach (var entry in entries)
+    {
+        <a href="#@entry.Id">@entry.Name</a>
+    }
+</nav>
+
+<div class="confession-list">
+    @foreach (var entry in entries)
+    {
+        <article class="confession" id="@entry.Id">
+            <h2>@entry.Name</h2>
+            @foreach (var para in entry.Paragraphs)
+            {
+                <p>@para</p>
+            }
+        </article>
+    }
+</div>
+
+<div class="page-cta">
+    <p>Read something that moved you?</p>
+    <a class="btn btn-primary" href="/Reflection">Leave your own reflection</a>
+</div>

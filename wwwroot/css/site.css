@@ -64,10 +64,18 @@ main { max-width: var(--max); margin: 0 auto; padding: 3rem 1.25rem 5rem; }
 .intro h2, .toc-preview h2 { font-family: var(--serif); font-size: 1.5rem; margin-bottom: 1rem; }
 .intro { margin-bottom: 3rem; }
 .intro p { color: var(--ink-soft); }
+.dedication { margin-bottom: 3rem; }
+.dedication h2 { font-family: var(--serif); font-size: 1.5rem; margin-bottom: 1rem; }
+.dedication p { color: var(--ink-soft); margin: 0 0 .75rem; }
+.dedication ul { margin: 0; padding-left: 1.4rem; color: var(--ink-soft); }
+.dedication li { margin-bottom: .35rem; }
 
 .toc-list { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; }
 .toc-list a { display: block; padding: .6rem .9rem; background: var(--bg-alt); border-radius: 4px; font-weight: 500; color: var(--ink); }
 .toc-list a:hover { background: var(--accent-light); text-decoration: none; }
+
+.toc-full { padding-left: 1.4rem; display: grid; gap: .6rem; }
+.toc-full a { font-weight: 500; }
 
 /* Page head (Confessions / Reflection) */
 .page-head { margin-bottom: 2rem; }
@@ -99,6 +107,8 @@ main { max-width: var(--max); margin: 0 auto; padding: 3rem 1.25rem 5rem; }
 }
 .field input:focus, .field textarea:focus { outline: none; border-color: var(--accent); }
 .error { display: block; margin-top: .4rem; font-size: .8rem; color: var(--error); }
+.form-error-summary { margin-bottom: 1.5rem; }
+.form-error-summary ul { margin: 0; padding-left: 1.2rem; }
 .reflection-form .btn { align-self: flex-start; }
 
 /* Confirmation */

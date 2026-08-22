@@ -17,6 +17,7 @@
             </button>
             <nav class="site-nav" id="site-nav">
                 <a href="/" data-active="@((ViewData["Active"] as string == "Home") ? "true" : "false")">Home</a>
+                <a href="/TableOfContents" data-active="@((ViewData["Active"] as string == "TableOfContents") ? "true" : "false")">Contents</a>
                 <a href="/Confessions" data-active="@((ViewData["Active"] as string == "Confessions") ? "true" : "false")">Confessions</a>
                 <a href="/FinalPrayer" data-active="@((ViewData["Active"] as string == "FinalPrayer") ? "true" : "false")">Final Prayer</a>
                 <a href="/Reflection" data-active="@((ViewData["Active"] as string == "Reflection") ? "true" : "false")">Leave a Reflection</a>

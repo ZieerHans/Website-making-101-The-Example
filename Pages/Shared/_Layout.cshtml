@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] &middot; Echoes of Grace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="brand" href="/">Echoes <span>of Grace</span></a>
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="site-nav" id="site-nav">
+                <a href="/" data-active="@((ViewData["Active"] as string == "Home") ? "true" : "false")">Home</a>
+                <a href="/Confessions" data-active="@((ViewData["Active"] as string == "Confessions") ? "true" : "false")">Confessions</a>
+                <a href="/FinalPrayer" data-active="@((ViewData["Active"] as string == "FinalPrayer") ? "true" : "false")">Final Prayer</a>
+                <a href="/Reflection" data-active="@((ViewData["Active"] as string == "Reflection") ? "true" : "false")">Leave a Reflection</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <p>Echoes of Grace &middot; A Theology PETA &middot; Academic A-02, Group 2</p>
+    </footer>
+
+    <script src="~/js/site.js"></script>
+</body>
+</html>

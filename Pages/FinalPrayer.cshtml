@@ -1,0 +1,22 @@
+@page "/FinalPrayer"
+@model EchoesOfGrace.Pages.FinalPrayerModel
+@{
+    var vow = EchoesOfGrace.Data.SiteContent.Entries.First(e => e.Id == "vow");
+}
+
+<section class="page-head">
+    <p class="eyebrow">Closing</p>
+    <h1>@vow.Name</h1>
+</section>
+
+<article class="confession">
+    @foreach (var para in vow.Paragraphs)
+    {
+        <p>@para</p>
+    }
+</article>
+
+<div class="page-cta">
+    <p>This is where the book ends &mdash; but reflection doesn't have to.</p>
+    <a class="btn btn-primary" href="/Reflection">Leave your own reflection</a>
+</div>

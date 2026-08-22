@@ -1,0 +1,31 @@
+@page "/"
+@model EchoesOfGrace.Pages.IndexModel
+
+<section class="hero">
+    <p class="eyebrow">A Theology PETA &middot; Group 2</p>
+    <h1>Echoes of Grace</h1>
+    <p class="hero-sub">The Book of Confessions of the Young</p>
+    <div class="hero-actions">
+        <a class="btn btn-primary" href="/Confessions">Read the Confessions</a>
+        <a class="btn btn-secondary" href="/Reflection">Leave a Reflection</a>
+    </div>
+</section>
+
+<section class="intro">
+    <h2>Introduction</h2>
+    @foreach (var para in EchoesOfGrace.Data.SiteContent.Entries[0].Paragraphs)
+    {
+        <p>@para</p>
+    }
+</section>
+
+<section class="toc-preview">
+    <h2>What's inside</h2>
+    <ul class="toc-list">
+        @foreach (var entry in EchoesOfGrace.Data.SiteContent.Entries.Where(e => e.Id != "introduction" && e.Id != "vow"))
+        {
+            <li><a href="/Confessions#@entry.Id">@entry.Name</a></li>
+        }
+        <li><a href="/FinalPrayer">Final Prayer / Vow</a></li>
+    </ul>
+</section>

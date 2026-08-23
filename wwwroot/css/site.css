@@ -52,7 +52,9 @@ main { max-width: var(--max); margin: 0 auto; padding: 3rem 1.25rem 5rem; }
 .eyebrow { font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; color: var(--accent); font-weight: 600; margin: 0 0 .5rem; }
 
 /* Hero */
-.hero { text-align: center; padding: 2rem 0 3rem; border-bottom: 1px solid var(--line); margin-bottom: 3rem; }
+.hero { position: relative; overflow: hidden; text-align: center; padding: 2rem 0 3rem; border-bottom: 1px solid var(--line); margin-bottom: 3rem; display: flex; flex-direction: column; align-items: center; }
+.hero-motif { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: clamp(260px, 40vw, 460px); height: clamp(260px, 40vw, 460px); color: var(--accent); opacity: .07; pointer-events: none; z-index: 0; }
+.hero-content { position: relative; z-index: 1; max-width: 100%; }
 .hero h1 { font-family: var(--serif); font-size: clamp(2.5rem, 8vw, 3.5rem); margin: 0; }
 .hero-sub { color: var(--ink-soft); font-size: 1.1rem; margin: .5rem 0 2rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
@@ -136,3 +138,13 @@ main { max-width: var(--max); margin: 0 auto; padding: 3rem 1.25rem 5rem; }
 .reflection-entry h2 { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .5rem; font-size: 1.15rem; }
 .reflection-timestamp { font-family: var(--sans); font-weight: 500; font-size: .72rem; color: var(--ink-soft); text-transform: none; letter-spacing: 0; }
 .reflection-lesson { color: var(--ink-soft); font-size: .9rem; padding-top: .5rem; border-top: 1px dashed var(--line); }
+
+/* Desktop */
+@media (min-width: 960px) {
+  :root { --max: 46rem; }
+  main { padding: 4.5rem 1.5rem 6rem; }
+  .hero { padding: 3.5rem 0 4.5rem; margin-bottom: 4rem; }
+  .hero h1 { font-size: clamp(3rem, 4.5vw, 4.25rem); }
+  .hero-sub { font-size: 1.25rem; }
+  .confession-list { gap: 3.5rem; }
+               }

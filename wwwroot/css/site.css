@@ -22,9 +22,12 @@ button { font-family: inherit; }
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); }
 .site-header-inner { max-width: 64rem; margin: 0 auto; padding: 1rem 1.25rem; display: flex; align-items: center; justify-content: space-between; }
-.brand { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--ink); }
-.brand span { color: var(--accent); }
+.brand { display: inline-flex; align-items: center; gap: .3rem; font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--ink); }
+.brand-main { color: var(--ink); }
+.brand-mark { display: inline-flex; align-items: center; color: var(--accent); opacity: .85; transform: translateY(-1px); }
+.brand-accent { color: var(--accent); font-style: italic; font-weight: 500; font-size: .93em; letter-spacing: .01em; }
 .brand:hover { text-decoration: none; }
+.brand:hover .brand-accent { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
 .site-nav { display: flex; gap: 1.5rem; }
 .site-nav a { font-size: .85rem; font-weight: 500; color: var(--ink-soft); }

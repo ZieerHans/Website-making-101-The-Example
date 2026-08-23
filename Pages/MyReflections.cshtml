@@ -1,0 +1,53 @@
+@page "/MyReflections"
+@model EchoesOfGrace.Pages.MyReflectionsModel
+
+<section class="page-head">
+    <p class="eyebrow">Review</p>
+    <h1>Reflections Received</h1>
+    <p class="page-sub">
+        @if (Model.Entries.Count == 0)
+        {
+            <text>No reflections have been saved yet.</text>
+        }
+        else if (Model.Entries.Count == 1)
+        {
+            <text>1 reflection saved by the server.</text>
+        }
+        else
+        {
+            <text>@Model.Entries.Count reflections saved by the server.</text>
+        }
+    </p>
+</section>
+
+@if (Model.Entries.Count == 0)
+{
+    <div class="page-cta">
+        <p>Nothing here yet.</p>
+        <a class="btn btn-primary" href="/Reflection">Leave the first reflection</a>
+    </div>
+}
+else
+{
+    <div class="confession-list">
+        @foreach (var entry in Model.Entries)
+        {
+            <article class="confession reflection-entry">
+                <h2>
+                    #@entry.Id &middot; @entry.Name
+                    <span class="reflection-timestamp">@entry.SubmittedAtUtc.ToString("MMM d, yyyy \u00b7 HH:mm") UTC</span>
+                </h2>
+                <p>@entry.Reflection</p>
+                @if (!string.IsNullOrWhiteSpace(entry.Lesson))
+                {
+                    <p class="reflection-lesson"><strong>Lesson from St. Augustine:</strong> @entry.Lesson</p>
+                }
+            </article>
+        }
+    </div>
+}
+
+<div class="page-cta">
+    <p>Have something on your mind?</p>
+    <a class="btn btn-primary" href="/Reflection">Leave a reflection</a>
+</div>

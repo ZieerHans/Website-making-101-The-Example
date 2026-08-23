@@ -1,6 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
+builder.Services.AddSingleton<EchoesOfGrace.Data.ReflectionStore>();
 
 // Works on Replit (PORT env var) and on Render/Docker (PORT env var too),
 // falling back to 8080 for plain local runs.

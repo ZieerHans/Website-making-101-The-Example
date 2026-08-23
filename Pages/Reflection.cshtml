@@ -6,10 +6,12 @@
     <section class="confirm">
         <p class="eyebrow">Received</p>
         <h1>Thank you, @Model.SubmittedName.</h1>
-        <p>Your reflection has been recorded.</p>
+        <p>Your reflection has been recorded by the server.</p>
+        <p class="confirm-count">This is reflection <strong>#@Model.TotalCount</strong> saved so far.</p>
         <div class="hero-actions">
             <a class="btn btn-primary" href="/Confessions">Back to Confessions</a>
             <a class="btn btn-secondary" href="/Reflection">Write another</a>
+            <a class="btn btn-secondary" href="/MyReflections">Review all reflections</a>
         </div>
     </section>
 }
@@ -19,6 +21,7 @@ else
         <p class="eyebrow">Respond</p>
         <h1>Leave a Reflection</h1>
         <p class="page-sub">Confessionmaxxing check &#128483;&#9997;&#65039;&#128293;</p>
+        <p class="page-meta"><a href="/MyReflections">@Model.TotalCount reflection(s) saved so far &rarr;</a></p>
     </section>
 
     <div asp-validation-summary="ModelOnly" class="error form-error-summary"></div>

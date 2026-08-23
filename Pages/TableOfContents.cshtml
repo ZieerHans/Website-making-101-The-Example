@@ -15,18 +15,3 @@
     }
     <li><a href="/FinalPrayer">Final Prayer / Vow</a></li>
 </ol>
------ END FILE: Pages/TableOfContents.cshtml -----
-
------ FILE: Pages/TableOfContents.cshtml.cs -----
-using Microsoft.AspNetCore.Mvc.RazorPages;
-
-namespace EchoesOfGrace.Pages;
-
-public class TableOfContentsModel : PageModel
-{
-    public void OnGet()
-    {
-        ViewData["Title"] = "Table of Contents";
-        ViewData["Active"] = "TableOfContents";
-    }
-}

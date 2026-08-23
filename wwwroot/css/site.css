@@ -114,13 +114,22 @@ main { max-width: var(--max); margin: 0 auto; padding: 3rem 1.25rem 5rem; }
 /* Confirmation */
 .confirm { text-align: center; padding: 3rem 0; }
 .confirm h1 { font-family: var(--serif); font-size: 2rem; margin: .5rem 0; }
-
-/* Footer */
-.site-footer { border-top: 1px solid var(--line); padding: 2rem 1.25rem; text-align: center; color: var(--ink-soft); font-size: .8rem; }.reflection-form .btn { align-self: flex-start; }
-
-/* Confirmation */
-.confirm { text-align: center; padding: 3rem 0; }
-.confirm h1 { font-family: var(--serif); font-size: 2rem; margin: .5rem 0; }
+.confirm-count { color: var(--ink-soft); font-size: .9rem; }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--line); padding: 2rem 1.25rem; text-align: center; color: var(--ink-soft); font-size: .8rem; }
+
+/* Signature quote (Final Prayer page) */
+.signature { text-align: center; margin: 3rem 0 2.5rem; padding-top: 2.5rem; border-top: 1px solid var(--line); }
+.signature-mark { display: block; color: var(--accent); font-size: 1.1rem; margin-bottom: .75rem; letter-spacing: .3em; }
+.signature-quote { font-family: var(--serif); font-style: italic; font-size: 1.15rem; color: var(--ink); margin: 0 0 .4rem; }
+.signature-name { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); margin: 0; }
+
+/* Running-count link on the Reflection form page */
+.page-meta { margin: .5rem 0 0; }
+.page-meta a { font-size: .82rem; font-weight: 500; }
+
+/* Reflections review page */
+.reflection-entry h2 { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .5rem; font-size: 1.15rem; }
+.reflection-timestamp { font-family: var(--sans); font-weight: 500; font-size: .72rem; color: var(--ink-soft); text-transform: none; letter-spacing: 0; }
+.reflection-lesson { color: var(--ink-soft); font-size: .9rem; padding-top: .5rem; border-top: 1px dashed var(--line); }
